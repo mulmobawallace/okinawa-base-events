@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>基地マップ｜沖縄 米軍基地イベント情報</title>
+  <meta name="description" content="キャンプ・フォスター、嘉手納基地など沖縄の米軍基地の場所を地図で紹介。観光客の方にもわかる日本語の呼び名・アクセスの目安付き。">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>沖縄 米軍基地イベント情報</h1>
+      <p class="lead">基地の祭り・フリマ・オープンハウスを日本語でまとめています</p>
+      <nav>
+        <a href="index.html#events">イベント一覧</a>
+        <a href="map.html" aria-current="page">基地マップ</a>
+        <a href="index.html#guide">はじめての方へ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h2>基地マップ</h2>
+    <p>
+      「キャンプ・フォスター」「キンザー」など、英語の名前だけではどこにあるかわかりにくい基地を地図にまとめました。
+      ピンをタップすると、日本語での呼び名やアクセスの目安、その基地のイベント一覧へのリンクが表示されます。
+    </p>
+
+    <div id="map" class="map"></div>
+    <p class="small">※ ピンは基地のおおよその中心です。<strong>入口（ゲート）の位置ではありません。</strong>入場するゲートは各イベントの公式情報で確認してください。</p>
+
+    <h2>基地一覧</h2>
+    <div id="base-list" class="event-list"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>当サイトは米軍・各基地とは関係のない非公式の情報まとめサイトです。掲載内容の正確性は保証できません。</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="events.js"></script>
+  <script src="bases.js"></script>
+  <script src="map.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+:root {
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --text: #1d2430;
+  --muted: #5b6575;
+  --line: #dde1e7;
+  --navy: #1f3a5f;
+  --red: #c0392b;
+  --accent: #2e6fd8;
+  --warn-bg: #fff6e0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+  line-height: 1.7;
+}
+
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+
+/* ヘッダー */
+.site-header { background: var(--navy); color: #fff; padding: 28px 0 16px; }
+.site-header h1 { margin: 0; font-size: 1.6rem; }
+.site-header .lead { margin: 4px 0 12px; opacity: .85; }
+.site-header nav a { color: #fff; margin-right: 16px; font-size: .95rem; }
+
+h2 { font-size: 1.3rem; border-left: 5px solid var(--red); padding-left: 10px; margin-top: 36px; }
+
+.notice {
+  background: var(--warn-bg);
+  border: 1px solid #f0d58c;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-top: 20px;
+  font-size: .92rem;
+}
+
+/* 絞り込み */
+.filters { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; }
+.filters label { font-size: .9rem; color: var(--muted); }
+.filters select { margin-left: 6px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; font-size: .95rem; }
+.filters .check { display: flex; align-items: center; gap: 6px; }
+.count { color: var(--muted); font-size: .9rem; }
+
+/* イベントカード */
+.event-list { display: grid; gap: 14px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px 18px;
+}
+.card.past { opacity: .6; }
+.card .date { font-weight: bold; color: var(--navy); }
+.card h3 { margin: 4px 0 8px; font-size: 1.15rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.tag { font-size: .78rem; padding: 2px 8px; border-radius: 999px; background: #e8eef8; color: var(--navy); }
+.tag.status-中止, .tag.status-延期 { background: var(--red); color: #fff; }
+.tag.status-終了 { background: #ccc; color: #333; }
+
+.card details { margin-top: 8px; }
+.card summary { cursor: pointer; color: var(--accent); font-size: .92rem; }
+.card dl { display: grid; grid-template-columns: 7.5em 1fr; gap: 4px 10px; margin: 10px 0 0; font-size: .92rem; }
+.card dt { color: var(--muted); }
+.card dd { margin: 0; }
+.source { margin-top: 10px; font-size: .85rem; color: var(--muted); }
+.source a { color: var(--accent); }
+
+.empty { color: var(--muted); padding: 20px 0; }
+
+/* ガイド */
+.guide ol { padding-left: 1.3em; }
+.guide li { margin-bottom: 6px; }
+.small { font-size: .85rem; color: var(--muted); }
+
+/* フッター */
+.site-footer { margin-top: 48px; padding: 20px 0; background: #e9ecf0; font-size: .82rem; color: var(--muted); }
+
+@media (max-width: 520px) {
+  .site-header h1 { font-size: 1.3rem; }
+  .card dl { grid-template-columns: 1fr; }
+  .card dt { margin-top: 6px; }
+}
+
+/* 地図ページ */
+.map { height: 460px; border-radius: 10px; border: 1px solid var(--line); margin: 12px 0 6px; z-index: 0; }
+.base-label { font-weight: bold; font-size: .8rem; }
+.popup h3 { margin: 0 0 2px; font-size: 1.05rem; }
+.popup dl { display: grid; grid-template-columns: 7.5em 1fr; gap: 4px 10px; font-size: .9rem; }
+.popup dt { color: var(--muted); }
+.popup dd { margin: 0; }
+.links { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .92rem; }
+.links a { color: var(--accent); font-weight: bold; }
+.site-header nav a[aria-current="page"] { text-decoration: none; border-bottom: 2px solid #fff; }
+.base-link { color: var(--navy); }
+
+@media (max-width: 520px) {
+  .map { height: 360px; }
+  .popup dl { grid-template-columns: 1fr; }
+}
+
+/* 日程未発表のイベント */
+.card.tbd { border-style: dashed; }
+.card.tbd .date { color: var(--muted); }
+.tag.status-日程未発表 { background: #fff1c2; color: #7a5a00; }
+.tbd-note { margin: 0 0 6px; font-size: .85rem; color: #7a5a00; }
