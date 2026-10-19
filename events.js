@@ -31,7 +31,7 @@ const EVENTS = [
     fee: "",
     summary: "2026年は2月14・15日に開催。",
     sourceUrl: "https://www.okinawa.usmc-mccs.org/dining-entertainment/entertainment-events/festivals",
-    checkedAt: "2026-10-16"
+    checkedAt: "2026-10-19"
   },
   {
     id: "2027-schwab",
@@ -51,7 +51,7 @@ const EVENTS = [
     fee: "",
     summary: "2026年は3月28日に開催。",
     sourceUrl: "https://www.okinawa.usmc-mccs.org/dining-entertainment/entertainment-events/festivals",
-    checkedAt: "2026-10-16"
+    checkedAt: "2026-10-19"
   },
   {
     id: "2027-americafest",
@@ -91,7 +91,7 @@ const EVENTS = [
     fee: "",
     summary: "2026年は4月18日に開催。",
     sourceUrl: "https://www.okinawa.usmc-mccs.org/dining-entertainment/entertainment-events/festivals",
-    checkedAt: "2026-10-16"
+    checkedAt: "2026-10-19"
   },
   {
     id: "2027-flightline",
@@ -111,7 +111,7 @@ const EVENTS = [
     fee: "",
     summary: "2026年は5月9・10日に開催。",
     sourceUrl: "https://www.okinawa.usmc-mccs.org/about/mcas-futenma/events",
-    checkedAt: "2026-10-16"
+    checkedAt: "2026-10-19"
   },
   {
     id: "2027-kinser",
@@ -131,7 +131,7 @@ const EVENTS = [
     fee: "",
     summary: "2026年は6月13・14日に開催。",
     sourceUrl: "https://www.okinawa.usmc-mccs.org/dining-entertainment/entertainment-events/festivals",
-    checkedAt: "2026-10-16"
+    checkedAt: "2026-10-19"
   },
   {
     id: "2027-foster",
@@ -151,26 +151,25 @@ const EVENTS = [
     fee: "",
     summary: "2026年は7月4・5日（米国独立記念日）に開催。",
     sourceUrl: "https://www.okinawa.usmc-mccs.org/dining-entertainment/entertainment-events/festivals",
-    checkedAt: "2026-10-16"
+    checkedAt: "2026-10-19"
   },
   {
     id: "2026-comiccon",
     title: "コミコン沖縄",
     type: "その他",
     base: "キャンプ・フォスター",
-    status: "日程未発表",
-    expected: "2026年12月ごろ",           // 画面に表示する目安
-    startDate: "2026-12-01",        // 並び順用：目安の月の初日
-    endDate: "2026-12-31",          // 目安の月の末日（過ぎると「終了」扱い）
-    time: "",
+    status: "予定",
+    startDate: "2026-12-06",
+    endDate: "2026-12-06",
+    time: "10:00〜17:00",
     gate: "",
-    entry: "発表後に追記します。",
-    bring: "写真付き身分証（例年必要）",
+    entry: "日本国籍の方・米国籍の方・DoD IDカード保持者が対象。その他の国籍の方はキャンプ・バトラー基地パス事務所（098-970-7519）に要問い合わせ。",
+    bring: "",
     banned: "",
-    parking: "",
-    fee: "",
-    summary: "毎年12月にキャンプ・フォスターの複数会場で開かれるポップカルチャーのイベント。",
+    parking: "日本人・SOFA以外の方は国道58号沿いのキャンプ・フォスター・フリーマーケット駐車場を利用。",
+    fee: "無料（入場券不要）。早期入場などが付く有料の「ゴールドパス」もあり。",
+    summary: "キャンプ・フォスターのフィールドハウス、コミュニティセンターなど複数会場で開かれるポップカルチャーのイベント。来場者バッジは先着順で無料配布。",
     sourceUrl: "https://www.okinawa.usmc-mccs.org/dining-entertainment/entertainment-events/comic-con",
-    checkedAt: "2026-10-16"
+    checkedAt: "2026-10-19"
   }
 ];
