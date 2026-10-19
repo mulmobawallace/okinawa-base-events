@@ -74,5 +74,15 @@ const BASES = [
     fromAirport: "那覇空港から車で約1時間20分",
     nearby: "道の駅許田（車で約20分）",
     description: "名護市の東海岸・辺野古にある海兵隊の基地。"
+  },
+  {
+    id: "whitebeach",
+    name: "ホワイトビーチ",
+    otherNames: "ホワイトビーチ地区／White Beach Naval Facility",
+    area: "うるま市（勝連半島）",
+    lat: 26.3020, lng: 127.9060,
+    fromAirport: "那覇空港から車で約1時間",
+    nearby: "海中道路（車で約15分）、勝連城跡（車で約10分）",
+    description: "うるま市・勝連半島の先にある米海軍の港湾施設。海上自衛隊の基地もとなりにあります。"
   }
 ];

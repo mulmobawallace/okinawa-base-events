@@ -74,6 +74,26 @@ const EVENTS = [
     checkedAt: "2026-10-16"
   },
   {
+    id: "2027-whitebeach",
+    title: "ホワイトビーチ・フェスティバル",
+    type: "祭り",
+    base: "ホワイトビーチ",
+    status: "日程未発表",
+    expected: "2027年4月ごろ",
+    startDate: "2027-04-01",
+    endDate: "2027-04-30",
+    time: "",
+    gate: "",
+    entry: "発表後に追記します。",
+    bring: "写真付き身分証（2026年は身分証の提示と手荷物検査あり）",
+    banned: "",
+    parking: "",
+    fee: "",
+    summary: "米海軍と海上自衛隊の共催。2026年は4月25・26日に開催され、一般公開。艦船の見学（できる場合のみ）や展示、屋台など。",
+    sourceUrl: "https://www.dvidshub.net/news/562834/cfao-and-jmsdf-host-white-beach-festival-2026",
+    checkedAt: "2026-10-19"
+  },
+  {
     id: "2027-courtney",
     title: "キャンプ・コートニー・フェスティバル",
     type: "祭り",
