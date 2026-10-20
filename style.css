@@ -16,7 +16,7 @@
   --muted: #6b6152;
   --line: #d9cbb0;
 
-  --font-display: "Dela Gothic One", "Zen Kaku Gothic New", sans-serif;
+  --font-display: "RocknRoll One", "Zen Kaku Gothic New", sans-serif;
   --font-body: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
   --font-en: "Oswald", "Zen Kaku Gothic New", sans-serif;
 }
@@ -78,7 +78,7 @@ a { color: var(--navy); }
   font-size: clamp(2rem, 6.4vw, 3.4rem);
   line-height: 1.2;
   letter-spacing: .02em;
-  text-shadow: 3px 3px 0 var(--red);
+  text-shadow: 2px 2px 0 var(--red);
 }
 .site-title a { color: inherit; text-decoration: none; }
 
@@ -417,6 +417,10 @@ a { color: var(--navy); }
 }
 .links a:first-child { color: var(--cream); background: var(--red); }
 .links a + a { color: var(--navy); border: 1.5px solid var(--navy); }
+
+@media (max-width: 760px) {
+  .base-grid { grid-template-columns: 1fr; }
+}
 
 /* ---------- スマホ ---------- */
 @media (max-width: 640px) {
