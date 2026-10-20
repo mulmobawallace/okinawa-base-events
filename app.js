@@ -56,7 +56,35 @@ function baseLink(name) {
   return `<a class="base-link" href="map.html?base=${base.id}#map">${esc(name)}</a>`;
 }
 
-function renderCard(ev) {
+// チケットの半券に出す日付（例：DEC / 6 / SUN、日程未発表なら 2027 / APR / ごろ）
+const MONTHS = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+const WEEKS = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+
+function stubHtml(ev) {
+  const s = new Date(ev.startDate + "T00:00:00");
+  const e = new Date(ev.endDate + "T00:00:00");
+  let top, big, bot, botClass = "";
+  if (ev.status === "日程未発表") {
+    top = s.getFullYear();
+    big = MONTHS[s.getMonth()];
+    bot = "ごろ";
+    botClass = "ja";
+  } else {
+    const sameMonth = s.getMonth() === e.getMonth();
+    top = sameMonth ? MONTHS[s.getMonth()] : `${MONTHS[s.getMonth()]}–${MONTHS[e.getMonth()]}`;
+    big = ev.startDate === ev.endDate ? s.getDate() : `${s.getDate()}–${e.getDate()}`;
+    bot = ev.startDate === ev.endDate ? WEEKS[s.getDay()] : s.getFullYear();
+  }
+  const long = String(big).length > 3 ? " is-long" : "";
+  return `
+      <div class="ticket-stub" aria-hidden="true">
+        <span class="stub-top">${top}</span>
+        <span class="stub-big${long}">${big}</span>
+        <span class="stub-bot ${botClass}">${bot}</span>
+      </div>`;
+}
+
+function renderCard(ev, i) {
   const isPast = ev.endDate < today;
   const statusLabel = isPast ? "終了" : ev.status;
   const link = ev.sourceUrl && ev.sourceUrl !== "#"
@@ -67,18 +95,24 @@ function renderCard(ev) {
   const tbdNote = isTBD
     ? `<p class="tbd-note">正式な日程はまだ発表されていません。昨年の開催時期をもとにした目安です。</p>`
     : "";
+  // 中止・延期はスタンプで目立たせる
+  const isStamp = !isPast && (ev.status === "中止" || ev.status === "延期");
+  const statusHtml = isStamp
+    ? `<span class="stamp">${esc(ev.status)}</span>`
+    : `<span class="status status-${esc(statusLabel)}">${esc(statusLabel)}</span>`;
 
   return `
-    <article class="card ${isPast ? "past" : ""} ${isTBD ? "tbd" : ""}">
-      <div class="date">${formatRange(ev)}　${isTBD ? "" : esc(ev.time)}</div>
-      <h3>${esc(ev.title)}</h3>
-      <div class="tags">
-        <span class="tag">📍 ${baseLink(ev.base)}</span>
-        <span class="tag">${esc(ev.type)}</span>
-        <span class="tag status-${esc(statusLabel)}">${esc(statusLabel)}</span>
-      </div>
+    <article class="ticket ${isPast ? "past" : ""} ${isTBD ? "tbd" : ""}" style="--i:${i}">
+      <div class="ticket-main">
+        <div class="ticket-meta">
+          <span class="chip">${esc(ev.type)}</span>
+          <span>📍 ${baseLink(ev.base)}</span>
+          ${isStamp ? "" : statusHtml}
+        </div>
+        <h3>${esc(ev.title)}</h3>
+        <p class="when">${formatRange(ev)}${isTBD || !ev.time ? "" : "　" + esc(ev.time)}</p>
       ${tbdNote}
-      <p>${esc(ev.summary)}</p>
+      <p class="summary">${esc(ev.summary)}</p>
       <details>
         <summary>入場方法・持ち物などの詳細</summary>
         <dl>
@@ -91,6 +125,9 @@ function renderCard(ev) {
         </dl>
       </details>
       <div class="source">${link}（最終確認：${esc(ev.checkedAt)}）</div>
+      </div>
+      ${stubHtml(ev)}
+      ${isStamp ? statusHtml : ""}
     </article>`;
 }
 
@@ -105,7 +142,7 @@ function render() {
     .filter((ev) => showPast || ev.endDate >= today)
     .sort((a, b) => a.startDate.localeCompare(b.startDate));
 
-  countEl.textContent = `${items.length}件のイベント`;
+  countEl.textContent = `${items.length} EVENTS ／ ${items.length}件のイベント`;
   listEl.innerHTML = items.length
     ? items.map(renderCard).join("")
     : `<p class="empty">条件に合うイベントはありません。</p>`;

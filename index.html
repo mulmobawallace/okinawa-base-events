@@ -5,29 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>沖縄 米軍基地イベント情報</title>
   <meta name="description" content="沖縄の米軍基地で開かれる祭り・フリーマーケット・オープンハウスの日程と入場方法をまとめた非公式サイト。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Oswald:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="wrap">
-      <h1>沖縄 米軍基地イベント情報</h1>
+    <div class="bunting" aria-hidden="true"></div>
+    <div class="wrap header-inner">
+      <p class="kicker">★ OKINAWA BASE FEST GUIDE ★</p>
+      <p class="site-title"><a href="index.html">沖縄 米軍基地<br>イベント情報</a></p>
       <p class="lead">基地の祭り・フリマ・オープンハウスを日本語でまとめています</p>
-      <nav>
-        <a href="#events">イベント一覧</a>
+      <nav class="nav">
+        <a href="index.html#events" aria-current="page">イベント一覧</a>
         <a href="map.html">基地マップ</a>
-        <a href="#guide">はじめての方へ</a>
+        <a href="index.html#guide">はじめての方へ</a>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
     <p class="notice">
-      ⚠️ このサイトは<strong>非公式</strong>です。米軍のイベントは天候や警備の都合で急に中止・変更されることがあります。
+      このサイトは<strong>非公式</strong>です。米軍のイベントは天候や警備の都合で急に中止・変更されることがあります。
       お出かけ前に必ず各イベントの<strong>公式情報</strong>を確認してください。
     </p>
 
     <section id="events">
-      <h2>イベント一覧</h2>
+      <h1 class="sec-title"><span class="en">EVENTS</span>イベント一覧</h1>
       <p class="small">基地の場所がわからないときは <a href="map.html">基地マップ</a> をご覧ください。</p>
 
       <div class="filters">
@@ -47,14 +52,14 @@
     </section>
 
     <section id="guide" class="guide">
-      <h2>はじめて基地イベントに行く方へ</h2>
-      <ol>
-        <li><strong>写真付き身分証を必ず持参</strong>（運転免許証、パスポート、マイナンバーカードなど）。忘れると入れません。</li>
-        <li><strong>ゲートで手荷物検査</strong>があります。大きなバッグは避けると早く入れます。</li>
-        <li><strong>持ち込めない物</strong>：ドローン、ペット、刃物、アルコール類などは禁止されることが多いです。</li>
-        <li><strong>支払い</strong>：ドル・円の両方を使える店が多いですが、お釣りはドルになることがあります。</li>
-        <li><strong>写真撮影</strong>：撮影禁止のエリアがあります。係員の指示に従ってください。</li>
-        <li><strong>混雑</strong>：大型イベントは周辺道路が大渋滞します。公共交通機関やシャトルバスの利用がおすすめです。</li>
+      <h2 class="sec-title"><span class="en">FIRST VISIT</span>はじめて基地イベントに行く方へ</h2>
+      <ol class="guide-list">
+        <li><strong>写真付き身分証を必ず持参</strong>運転免許証、パスポート、マイナンバーカードなど。忘れると入れません。</li>
+        <li><strong>ゲートで手荷物検査</strong>入口で手荷物検査があります。大きなバッグは避けると早く入れます。</li>
+        <li><strong>持ち込めない物</strong>ドローン、ペット、刃物、アルコール類などは禁止されることが多いです。</li>
+        <li><strong>支払い</strong>ドル・円の両方を使える店が多いですが、お釣りはドルになることがあります。</li>
+        <li><strong>写真撮影</strong>撮影禁止のエリアがあります。係員の指示に従ってください。</li>
+        <li><strong>混雑</strong>大型イベントは周辺道路が大渋滞します。公共交通機関やシャトルバスの利用がおすすめです。</li>
       </ol>
       <p class="small">※ 入場ルールはイベントごと・年ごとに変わります。上記は一般的な目安です。</p>
     </section>
@@ -62,6 +67,7 @@
 
   <footer class="site-footer">
     <div class="wrap">
+      <p class="footer-mark">★ OKINAWA BASE FEST GUIDE ★</p>
       <p>当サイトは米軍・各基地とは関係のない非公式の情報まとめサイトです。掲載内容の正確性は保証できません。</p>
     </div>
   </footer>

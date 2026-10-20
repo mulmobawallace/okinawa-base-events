@@ -6,14 +6,19 @@
   <title>基地マップ｜沖縄 米軍基地イベント情報</title>
   <meta name="description" content="キャンプ・フォスター、嘉手納基地など沖縄の米軍基地の場所を地図で紹介。観光客の方にもわかる日本語の呼び名・アクセスの目安付き。">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Oswald:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="wrap">
-      <h1>沖縄 米軍基地イベント情報</h1>
+    <div class="bunting" aria-hidden="true"></div>
+    <div class="wrap header-inner">
+      <p class="kicker">★ OKINAWA BASE FEST GUIDE ★</p>
+      <p class="site-title"><a href="index.html">沖縄 米軍基地<br>イベント情報</a></p>
       <p class="lead">基地の祭り・フリマ・オープンハウスを日本語でまとめています</p>
-      <nav>
+      <nav class="nav">
         <a href="index.html#events">イベント一覧</a>
         <a href="map.html" aria-current="page">基地マップ</a>
         <a href="index.html#guide">はじめての方へ</a>
@@ -22,8 +27,8 @@
   </header>
 
   <main class="wrap">
-    <h2>基地マップ</h2>
-    <p>
+    <h1 class="sec-title"><span class="en">BASE MAP</span>基地マップ</h1>
+    <p class="intro">
       「キャンプ・フォスター」「キンザー」など、英語の名前だけではどこにあるかわかりにくい基地を地図にまとめました。
       ピンをタップすると、日本語での呼び名やアクセスの目安、その基地のイベント一覧へのリンクが表示されます。
     </p>
@@ -31,12 +36,13 @@
     <div id="map" class="map"></div>
     <p class="small">※ ピンは基地のおおよその中心です。<strong>入口（ゲート）の位置ではありません。</strong>入場するゲートは各イベントの公式情報で確認してください。</p>
 
-    <h2>基地一覧</h2>
-    <div id="base-list" class="event-list"></div>
+    <h2 class="sec-title"><span class="en">BASES</span>基地一覧</h2>
+    <div id="base-list" class="base-grid"></div>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
+      <p class="footer-mark">★ OKINAWA BASE FEST GUIDE ★</p>
       <p>当サイトは米軍・各基地とは関係のない非公式の情報まとめサイトです。掲載内容の正確性は保証できません。</p>
     </div>
   </footer>
