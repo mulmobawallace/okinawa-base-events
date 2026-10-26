@@ -31,7 +31,7 @@ const EVENTS = [
     fee: "",
     summary: "2026年は2月14・15日に開催。",
     sourceUrl: "https://www.okinawa.usmc-mccs.org/dining-entertainment/entertainment-events/festivals",
-    checkedAt: "2026-10-19"
+    checkedAt: "2026-10-26"
   },
   {
     id: "2027-schwab",
@@ -51,7 +51,7 @@ const EVENTS = [
     fee: "",
     summary: "2026年は3月28日に開催。",
     sourceUrl: "https://www.okinawa.usmc-mccs.org/dining-entertainment/entertainment-events/festivals",
-    checkedAt: "2026-10-19"
+    checkedAt: "2026-10-26"
   },
   {
     id: "2027-americafest",
@@ -91,7 +91,7 @@ const EVENTS = [
     fee: "",
     summary: "米海軍と海上自衛隊の共催。2026年は4月25・26日に開催され、一般公開。艦船の見学（できる場合のみ）や展示、屋台など。",
     sourceUrl: "https://www.dvidshub.net/news/562834/cfao-and-jmsdf-host-white-beach-festival-2026",
-    checkedAt: "2026-10-19"
+    checkedAt: "2026-10-26"
   },
   {
     id: "2027-courtney",
@@ -111,7 +111,7 @@ const EVENTS = [
     fee: "",
     summary: "2026年は4月18日に開催。",
     sourceUrl: "https://www.okinawa.usmc-mccs.org/dining-entertainment/entertainment-events/festivals",
-    checkedAt: "2026-10-19"
+    checkedAt: "2026-10-26"
   },
   {
     id: "2027-flightline",
@@ -130,8 +130,8 @@ const EVENTS = [
     parking: "",
     fee: "",
     summary: "2026年は5月9・10日に開催。",
-    sourceUrl: "https://www.okinawa.usmc-mccs.org/about/mcas-futenma/events",
-    checkedAt: "2026-10-19"
+    sourceUrl: "https://www.okinawa.usmc-mccs.org/dining-entertainment/entertainment-events/festivals",
+    checkedAt: "2026-10-26"
   },
   {
     id: "2027-kinser",
@@ -151,7 +151,7 @@ const EVENTS = [
     fee: "",
     summary: "2026年は6月13・14日に開催。",
     sourceUrl: "https://www.okinawa.usmc-mccs.org/dining-entertainment/entertainment-events/festivals",
-    checkedAt: "2026-10-19"
+    checkedAt: "2026-10-26"
   },
   {
     id: "2027-foster",
@@ -171,7 +171,7 @@ const EVENTS = [
     fee: "",
     summary: "2026年は7月4・5日（米国独立記念日）に開催。",
     sourceUrl: "https://www.okinawa.usmc-mccs.org/dining-entertainment/entertainment-events/festivals",
-    checkedAt: "2026-10-19"
+    checkedAt: "2026-10-26"
   },
   {
     id: "2026-comiccon",
@@ -190,6 +190,6 @@ const EVENTS = [
     fee: "無料（入場券不要）。早期入場などが付く有料の「ゴールドパス」もあり。",
     summary: "キャンプ・フォスターのフィールドハウス、コミュニティセンターなど複数会場で開かれるポップカルチャーのイベント。来場者バッジは先着順で無料配布。",
     sourceUrl: "https://www.okinawa.usmc-mccs.org/dining-entertainment/entertainment-events/comic-con",
-    checkedAt: "2026-10-19"
+    checkedAt: "2026-10-26"
   }
 ];
