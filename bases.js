@@ -84,5 +84,15 @@ const BASES = [
     fromAirport: "那覇空港から車で約1時間",
     nearby: "海中道路（車で約15分）、勝連城跡（車で約10分）",
     description: "うるま市・勝連半島の先にある米海軍の港湾施設。海上自衛隊の基地もとなりにあります。"
+  },
+  {
+    id: "torii",
+    name: "トリイ通信施設",
+    otherNames: "トリイステーション／Torii Station",
+    area: "読谷村",
+    lat: 26.3750, lng: 127.7350,
+    fromAirport: "那覇空港から車で約1時間",
+    nearby: "残波岬、やちむんの里（読谷村内）",
+    description: "読谷村にある米陸軍の通信施設。正面ゲートに大きな鳥居が立っています。"
   }
 ];
